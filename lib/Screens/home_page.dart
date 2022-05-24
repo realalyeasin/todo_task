@@ -4,12 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:todo_app/Screens/BottomNavBar/bnb_controller.dart';
 import 'package:todo_app/Screens/search_notes.dart';
-
 import 'all_notes.dart';
 import 'edit_delete_notes.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+
+  HomePage({Key? key,}) : super(key: key);
   BNBController bnbController = Get.put(BNBController());
   @override
   Widget build(BuildContext context) {

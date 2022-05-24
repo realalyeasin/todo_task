@@ -6,7 +6,11 @@ class EditDeleteNotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(182, 232, 245, 1)
+      backgroundColor: Color.fromRGBO(194, 184, 255, 1),
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Color.fromRGBO(54, 115, 125, 1),
+        title: Text("Edit Notes"),),
     );
   }
 }
