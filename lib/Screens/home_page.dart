@@ -24,9 +24,13 @@ class HomePage extends StatelessWidget {
             ],
           ),
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.lightBlueAccent.shade100,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.blueGrey,
+          elevation: 3,
           onTap: bnbController.changeTabIndex,
           currentIndex: bnbController.tabIndex.value,
-          backgroundColor: Colors.lightBlueAccent.shade100,
+
           items: [
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.noteSticky),label: 'All Notes' ),
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.search),label: 'Search Notes' ),

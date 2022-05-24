@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:todo_app/Binding/controller_binding.dart';
 import 'OnBoarding/views.dart';
 import 'Screens/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -35,6 +36,7 @@ class App extends StatelessWidget {
         'OnBoardingPage': (context) => OnboardingPage(),
         'HomePage': (context) =>  HomePage(),
       },
+      initialBinding: ControllerBinding(),
     );
   }
 }
