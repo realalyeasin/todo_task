@@ -29,38 +29,41 @@ class AllNotes extends StatelessWidget {
                     ? SizedBox(
                         child: CircularProgressIndicator(),
                       )
-                    : ListView.builder(
+                    : ListView.separated(
                         itemCount: todo.todoList.length,
                         itemBuilder: (BuildContext, index) {
                           return Padding(
                             padding: const EdgeInsets.only(
                                 left: 30, right: 30, top: 10),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
+                                Checkbox(
+                                    value: todo.todoList[index].isDone,
+                                    onChanged: (value) => {
+                                          todo.addToD(
+                                              todo.todoList[index].task,
+                                              !todo.todoList[index].isDone,
+                                              todo.todoList[index].id)
+                                        }),
                                 Text(
                                   todo.todoList[index].task,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18),
                                 ),
-                                todo.todoList[index].isDone
-                                    ? IconButton(
-                                        onPressed: () {},
-                                        icon: Icon(
-                                          FontAwesomeIcons.check,
-                                          color: Colors.green,
-                                        ))
-                                    : IconButton(
-                                        onPressed: () {},
-                                        icon: Icon(
-                                          FontAwesomeIcons.hourglass,
-                                          color: Colors.blueAccent,
-                                        ))
                               ],
                             ),
                           );
-                        })),
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return Divider(
+                            color: Colors.black,
+                            indent: 25,
+                            endIndent: 25,
+                            thickness: 1,
+                          );
+                        },
+                      )),
             floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.black,
               shape: RoundedRectangleBorder(
