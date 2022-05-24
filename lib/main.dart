@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'OnBoarding/on_boarding.dart';
+import 'OnBoarding/views.dart';
 import 'Screens/home_page.dart';
 
 int? initScreen;
@@ -27,11 +26,11 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       title: 'To-Do App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.purple),
       initialRoute:
           initScreen == 0 || initScreen == null ? 'OnBoardingPage' : 'HomePage',
       routes: {
-        'OnBoardingPage': (context) => OnBoardingPage(),
+        'OnBoardingPage': (context) => OnboardingPage(),
         'HomePage': (context) => HomePage(),
       },
     );

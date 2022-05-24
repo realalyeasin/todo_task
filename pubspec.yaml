@@ -29,7 +29,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  introduction_screen:
   get:
   shared_preferences:
 
