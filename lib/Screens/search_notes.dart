@@ -10,7 +10,7 @@ class SearchNotes extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color.fromRGBO(54, 115, 125, 1),
-        title: Text("Search Notes"),),
+        title: Text("Search To-Do"),),
     );
   }
 }
