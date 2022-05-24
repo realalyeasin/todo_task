@@ -16,11 +16,11 @@ class OnboardingController extends GetxController {
   }
 
   List<OnboardingInfo> onboardingPages = [
-    OnboardingInfo('images/welcome.gif', 'Order Your Food',
-        'Now you can order food any time  right from your mobile.'),
-    OnboardingInfo('images/pencil.gif', 'Cooking Safe Food',
-        'We are maintain safty and We keep clean while making food.'),
-    OnboardingInfo('images/list.gif', 'Quick Delivery',
-        'Orders your favorite meals will be  immediately deliver')
+    OnboardingInfo('images/welcome.gif', 'Welcome to To-Do List Application',
+        'Here you can make your list easily'),
+    OnboardingInfo('images/pencil.gif', 'Listing is easy',
+        'You can list anything anytime and find your items any moment'),
+    OnboardingInfo('images/list.gif', 'It is highly secured',
+    'You can keep you lists here with full trust')
   ];
 }
