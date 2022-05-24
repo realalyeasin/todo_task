@@ -33,7 +33,7 @@ class App extends StatelessWidget {
           initScreen == 0 || initScreen == null ? 'OnBoardingPage' : 'HomePage',
       routes: {
         'OnBoardingPage': (context) => OnboardingPage(),
-        'HomePage': (context) => HomePage(),
+        'HomePage': (context) =>  HomePage(),
       },
     );
   }
