@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/state_manager.dart';
-import 'package:get/utils.dart';
+import 'package:get/get.dart';
+import '../Screens/home_page.dart';
 import 'model.dart';
 
 class OnboardingController extends GetxController {
@@ -10,7 +10,7 @@ class OnboardingController extends GetxController {
 
   forwardAction() {
     if (isLastPage) {
-      //go to home page
+      Get.to(()=> HomePage());
     } else
       pageController.nextPage(duration: 300.milliseconds, curve: Curves.ease);
   }
